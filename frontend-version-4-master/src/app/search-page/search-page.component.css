@@ -1,0 +1,217 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .top-result-container {
+    flex: 0 0 50%;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #282828;
+    border-radius: 10px;
+  }
+  
+  .spotify-container {
+    flex: 0 0 50%;
+    padding: 10px ;
+    background-color: #363636;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  
+  .spotify-card {
+    width: 90%;
+    padding: 8px 10px; /* Reduced padding for a more compact look */
+    /* border: 1px solid #ddd; */
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 7px !important; /* Reduced margin between cards */
+    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto; /* Let content dictate the height */
+  }
+  
+  .spotify-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .spotify-card img {
+    height: 48px; /* Reduced image size */
+    width: 48px; /* Reduced width */
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .track-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .track-info mat-card-title {
+    font-size: 1rem; /* Slightly smaller text size */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  .track-info .subtitle {
+    font-size: 0.85rem; /* Smaller subtitle */
+    color: #aaa;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .actions .spotify-button {
+    background-color: #1db954;
+    color: rgb(19, 18, 18);
+    font-weight: bold;
+    padding: 3px 8px; /* Reduced padding for buttons */
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 8px;
+  }
+  
+  .actions .wishlist-button {
+    color: white;
+  }
+  
+  .actions .wishlist-button mat-icon {
+    font-size: 1.4rem;
+  }
+  
+  .spotify-button:hover {
+    background-color: #18a34a;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  .actions .wishlist-button {
+    color: white; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  .actions .wishlist-button:active {
+    color: red; /* Change to red when clicked */
+  }
+  
+  .actions .wishlist-button mat-icon {
+    font-size: 1.4rem;
+  }
+ /* Top result container */
+.top-result-container {
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #282828;
+  border-radius: 10px;
+}
+
+.top-result-card {
+  display: flex;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+  position: relative;
+  height: 250px; /* Increased height */
+  width: 100%; /* Take full container width */
+}
+
+.top-result-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Enlarged square album image */
+.top-result-image img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image stays square without distortion */
+  margin-right: 20px;
+}
+
+/* Song info */
+.top-result-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-result-info mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.top-result-info .subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin: 5px 0;
+}
+
+.top-result-info p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+/* Buttons aligned at bottom right */
+.top-result-actions {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.spotify-button {
+  background-color: #1db954;
+  color: white;
+  font-weight: bold;
+  padding: 7px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 10px; /* Space between buttons */
+}
+
+.spotify-button:hover {
+  background-color: #18a34a;
+}
+
+.wishlist-button {
+  color: white;
+  margin-left: 5px; /* Slight margin for spacing */
+}
+
+.wishlist-button mat-icon {
+  font-size: 1.5rem;
+}
+.spotify-card:hover {
+  background-color: #404040;
+}
+.top-result-card:hover {
+  background-color: #4b4949;
+}

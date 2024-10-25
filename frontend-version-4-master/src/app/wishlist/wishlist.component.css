@@ -1,0 +1,122 @@
+/* .playlist-container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-left: 150px;
+  }
+  .top-container
+  { 
+    flex-direction: row;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+  }
+  .header-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #282828;
+    color: white;
+    height: 170px;
+  }
+  
+  .playlist-icon img {
+    width: 150px; 
+  }
+  
+  .song-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .song-image img {
+    width: 80px; 
+  }
+  
+  .song-info-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .song-details {
+    margin-left: 20px;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  mat-icon {
+    color: red;
+  } */
+  .playlist-container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-left: 150px;
+  }
+  .top-container
+  { 
+    display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #52029c, #f9f8fa); /* Gradient background */
+  padding: 20px 10px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  align-items: center; 
+  }
+  .header-content{
+    display: flex;
+  align-items: center;
+  width: 100%;
+  }
+  .header-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .header-card {
+    background-color: transparent; /* Transparent to match top-container background */
+    color: white;
+    height: 170px;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    border: none; /* Remove any borders */
+    box-shadow: none;
+  }
+  .playlist-icon img {
+    width: 150px;
+  }
+  .song-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #121212; 
+    color: white;
+    margin-top: 10px;
+  }
+  .song-image img {
+    width: 80px; 
+  }
+  .song-info-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  .song-details {
+    margin-left: 20px;
+  }
+  .mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  mat-icon {
+    color: red; 
+  }

@@ -1,0 +1,193 @@
+.playlist-card {
+  background-color: var(--spotify-black);
+  margin-right: 16px;
+  width: 180px; /* Set a fixed width for each card */
+  border-radius: 12px;
+  overflow: hidden; /* Ensure corners are rounded */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease; 
+}
+
+
+.playlist-card:hover {
+  transform: scale(1.05);
+}
+
+.playlist-card img {
+  width: 100%;
+  height: 100%; /* Set height to 100% to cover the card completely */
+  object-fit: cover; /* Cover the entire card area without distortion */
+  border-radius: 12px 12px 0 0; /* Maintain rounded corners only on the top */
+}
+
+.playlist-card mat-card-content {
+  padding: 10px; /* Keep padding for text content */
+  background-color: var(--spotify-black); /* Match the background color */
+}
+
+.track-name {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.artist-name {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px; /* Space below the artist name */
+}
+
+.playlists-container {
+  background-color: var(--spotify-black);
+  padding: 20px;
+  color: white;
+}
+
+.section-title {
+  color: white;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tracks {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px;
+  margin-left:30px
+}
+
+.tracks::-webkit-scrollbar {
+  height: 8px; 
+}
+
+.tracks::-webkit-scrollbar-thumb {
+  background-color: var(--spotify-green); /* Spotify green for scrollbar */
+  border-radius: 10px;
+}
+/* 
+.playlist-card {
+  background-color: #181818;
+  margin-right: 16px;
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease; /* Set a fixed width for each card 
+} */
+
+.playlist-card:hover {
+  transform: scale(1.05);
+}
+
+.playlist-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* border-bottom: 2px solid #1DB954; */
+}
+
+.playlist-card mat-card-content {
+  padding: 10px;
+}
+
+.track-name {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.artist-name {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px; /* Add some space below the artist name */
+}
+.play-button {
+  background-color: var(--spotify-green);
+  color: white;
+  text-transform: none;
+  font-size: 18px;
+  border-radius: 50%; /* Rounded corners for a circular shape */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 0; /* Remove padding to ensure it's circular */
+  border: none; /* Remove any border */
+  outline: none; /* Remove outline */
+}
+
+/* Optional: Adjust the hover effect for better appearance */
+.play-button:hover {
+  background-color: #1ed760; /* Change background color on hover */
+}
+
+/* Adjustments for card actions */
+.mat-card-actions {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: space-between;  
+  /* align-items: flex-end;*/
+  padding: 10px; /* Padding for spacing */
+  margin-top: auto;
+}
+
+/* Optional: Add margin for wishlist button */
+.wishlist-button {
+  margin-left: 80px;
+  margin-right:10px;
+  flex:1 /* Add space between play button and wishlist button */
+}
+
+
+.wishlist-button:hover {
+  color: var(--spotify-green);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .tracks {
+      display: block; /* On smaller screens, stack the tracks vertically */
+      padding: 0;
+  }
+
+  .playlist-card {
+      margin-bottom: 16px; /* Space between stacked cards */
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .playlist-card img {
+      height: 150px;
+  }
+  
+  .play-button {
+    width: 36px; /* Adjust size for smaller screens */
+    height: 36px;
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .track-name {
+      font-size: 14px;
+  }
+
+  .artist-name {
+      font-size: 12px;
+  }
+}
+/* Change the heart icon to red when added to wishlist */
+.wishlist-added {
+  color: red;
+}
+
+.wishlist-not-added {
+  color: gray;
+}
+
+/* Snack bar styling */
+.mat-snack-bar-container {
+  background-color: #4caf50; /* Green for success messages */
+  color: white;
+}

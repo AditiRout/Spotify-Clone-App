@@ -1,0 +1,89 @@
+/* Spotify Navbar Styling */
+.spotify-navbar {
+  padding: 0 15px;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.library-container {
+  flex-grow: 1;
+  
+}
+
+.home-container {
+  background-color: var(--spotify-dark-gray);
+  color: var(--white);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+
+.search-container {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  background-color: var(--spotify-black);
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: var(--white);
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: var(--white);
+}
+.menu-icon{
+  margin-right: 8px;
+  color:var(--spotify-green)
+}
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--white);
+  width: 100%;
+  font-size: 16px;
+}
+.auth-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.btn-signup, .btn-login {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-signup {
+  background-color: var(--spotify-green);
+  color: var(--white);
+  border: none;
+}
+
+.btn-login {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.btn-signup:hover {
+  background-color: darken(var(--spotify-green), 10%);
+}
+
+.btn-login:hover {
+  background-color: var(--white);
+  color: var(--spotify-black);
+}

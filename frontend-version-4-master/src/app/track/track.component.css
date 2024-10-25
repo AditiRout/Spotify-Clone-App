@@ -1,0 +1,51 @@
+/* src/app/track/track.component.css */
+
+.track-details {
+    background-color: #181818; /* Dark background */
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    max-width: 600px; /* Maximum width for content */
+    margin: auto; /* Center the content */
+    text-align: center; /* Center align text */
+  }
+  
+  .track-title {
+    font-size: 28px; /* Large title font */
+    font-weight: 700; /* Bold title */
+    margin-bottom: 10px; /* Space below title */
+  }
+  
+  .artist-name {
+    font-size: 20px; /* Artist name font */
+    color: #ccc; /* Light color for artist name */
+    margin-bottom: 15px; /* Space below artist name */
+  }
+  
+  .album-cover {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for image */
+    margin-bottom: 15px; /* Space below image */
+  }
+  
+  .album-info {
+    font-size: 16px; /* Font size for album info */
+    margin-bottom: 20px; /* Space below album info */
+  }
+  
+  .external-link {
+    margin-top: 20px; /* Space above link */
+  }
+  
+  .external-link a {
+    color: #1DB954; /* Spotify green for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium weight for link */
+  }
+  
+  .external-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  

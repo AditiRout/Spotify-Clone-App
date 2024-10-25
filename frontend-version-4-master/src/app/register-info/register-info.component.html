@@ -1,0 +1,56 @@
+<div class="form-container">
+  <mat-card class="spotify-card">
+    <div class="spotify-logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo">
+    </div>
+    <h2>Tell Us About Yourself</h2>
+    <form [formGroup]="registerForm">
+      <!-- Name input -->
+      <div class="form-group">
+        <input type="text" placeholder="What's your name?" formControlName="userName" required>
+        <!-- Validation error message for name -->
+        <div *ngIf="registerForm.get('userName')?.touched && registerForm.get('userName')?.invalid" class="error-message">
+          <small *ngIf="registerForm.get('userName')?.errors?.['required']">Name is required.</small>
+          <small *ngIf="registerForm.get('userName')?.errors?.['minlength']">Name must be at least 4 characters long.</small>
+        </div>
+      </div>
+
+      <!-- Date of Birth input -->
+      <div class="form-group">
+        <input type="date" formControlName="dob" required>
+      </div>
+
+      <!-- Gender selection -->
+      <div class="form-group">
+        <select formControlName="gender" required>
+          <option value="" disabled>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="nonbinary">Non-Binary</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- Security question selection -->
+      <div class="form-group">
+        <select formControlName="securityQuestion" required>
+          <option value="" disabled selected>Select a security question</option>
+          <option value="nickname">What is your nickname?</option>
+          <option value="school">What was your school's name?</option>
+        </select>
+      </div>
+
+      <!-- Security answer input -->
+      <div class="form-group">
+        <input type="text" placeholder="Answer to security question" formControlName="securityAnswer" required>
+        <!-- Validation error message for security answer -->
+        <div *ngIf="registerForm.get('securityAnswer')?.touched && registerForm.get('securityAnswer')?.invalid" class="error-message">
+          <small *ngIf="registerForm.get('securityAnswer')?.errors?.['required']">Answer is required.</small>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="button" class="next-button" (click)="onNext()">Next</button>
+    </form>
+  </mat-card>
+</div>

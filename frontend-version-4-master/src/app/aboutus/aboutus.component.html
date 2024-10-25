@@ -1,0 +1,18 @@
+<div class="about-us-container">
+    <div class="spotify-logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo" />
+    </div>
+    
+    <mat-card class="employee-card" *ngFor="let employee of employees">
+      <mat-card-header>
+        <mat-card-title>{{ employee.name }}</mat-card-title>
+        <mat-card-subtitle class="abc">{{ employee.designation }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Employee Code: {{ employee.code }}</p>
+        <p>Company: {{ employee.company }}</p>
+        <p>Phone: {{ employee.phone }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

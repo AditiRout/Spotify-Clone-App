@@ -1,0 +1,29 @@
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+  }
+  
+  .spotify-logo img {
+    width: 200px;
+    margin-bottom: 40px;
+  }
+  
+  .abc {
+    color: white;
+    margin-bottom: 7px;
+  }
+  
+  .employee-card {
+    width: 300px;
+    margin: 15px;
+    background-color: #181818;
+    color: #fff;
+  
+    mat-card-header {
+      background-color: #1db954;
+    }
+  }
+  

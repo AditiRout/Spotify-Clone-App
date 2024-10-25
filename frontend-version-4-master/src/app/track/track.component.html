@@ -1,0 +1,29 @@
+<!-- src/app/track/track.component.html -->
+<app-navbar-login></app-navbar-login>
+<div class="track-details" *ngIf="trackDetails">
+    <h1 class="track-title">{{ trackDetails.name }}</h1>
+    <h3 class="artist-name">by {{ trackDetails.artists[0]?.name }}</h3>
+    
+    <img class="album-cover" [src]="trackDetails.album.images[0]?.url" alt="Cover Image" />
+    
+    <p class="album-info">
+      <strong>Album:</strong> {{ trackDetails.album.name }} <br />
+      <strong>Release Date:</strong> {{ trackDetails.album.release_date }} <br />
+      <strong>Duration:</strong> {{ trackDetails.duration_ms | date:'mm:ss' }} <br />
+      <strong>Popularity:</strong> {{ trackDetails.popularity }} <br />
+    </p>
+  
+    <audio controls autoplay>
+      <source [src]="trackDetails.preview_url" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  
+    <p class="external-link">
+      <a [href]="trackDetails.external_urls.spotify" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+    </p>
+  </div>
+  
+  <div *ngIf="!trackDetails">
+    <p>Loading track details...</p>
+  </div>
+  

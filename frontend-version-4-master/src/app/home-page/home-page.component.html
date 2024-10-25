@@ -1,0 +1,119 @@
+<app-navbar-login></app-navbar-login>
+
+<div class="playlists-container">
+  <h2 class="section-title">Top Picks</h2>
+  <div class="tracks">
+    <mat-card *ngFor="let track of topTracks" class="playlist-card">
+      <mat-card-content (click)="goToTrackDetail(track.id)">
+        <img
+        mat-card-image
+        [src]="track.album.images[0]?.url"
+        alt="Cover image"
+        />
+        <mat-card-title class="track-name">{{ track.name | truncate: 15 }}</mat-card-title>
+        <p class="artist-name">by {{ track.artists[0]?.name }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-icon-button
+          class="play-button"
+          (click)="playTrack(track.external_urls.spotify)"
+        >
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-icon-button class="wishlist-button" (click)="addToWishlist(track)">
+          <mat-icon [ngClass]="isSongInWishlist(track.id) ? 'wishlist-added' : 'wishlist-not-added'">
+            favorite
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <h2 class="section-title">Recommended for Me</h2>
+  <div class="tracks">
+    <mat-card *ngFor="let track of recommendedTracks" class="playlist-card">
+      <mat-card-content (click)="goToTrackDetail(track.id)">
+        <img
+        mat-card-image
+        [src]="track.album.images[0]?.url"
+        alt="Cover image"
+        />
+        <mat-card-title class="track-name">{{ track.name | truncate: 15 }}</mat-card-title>
+        <p class="artist-name">by {{ track.artists[0]?.name }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-icon-button
+          class="play-button"
+          (click)="playTrack(track.external_urls.spotify)"
+        >
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-icon-button class="wishlist-button" (click)="addToWishlist(track)">
+          <mat-icon [ngClass]="isSongInWishlist(track.id) ? 'wishlist-added' : 'wishlist-not-added'">
+            favorite
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <h2 class="section-title">Latest Releases</h2>
+  <div class="tracks">
+    <mat-card *ngFor="let track of releases" class="playlist-card">
+      <mat-card-content (click)="goToTrackDetail(track.id)">
+        <img
+        mat-card-image
+        [src]="track.album.images[0]?.url"
+        alt="Cover image"
+        />
+        <mat-card-title class="track-name">{{ track.name | truncate: 15 }}</mat-card-title>
+        <p class="artist-name">by {{ track.artists[0]?.name }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-icon-button
+          class="play-button"
+          (click)="playTrack(track.external_urls.spotify)"
+        >
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-icon-button class="wishlist-button" (click)="addToWishlist(track)">
+          <mat-icon [ngClass]="isSongInWishlist(track.id) ? 'wishlist-added' : 'wishlist-not-added'">
+            favorite
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <h2 class="section-title">Discover Weekly</h2>
+  <div class="tracks">
+    <mat-card *ngFor="let track of customPlaylist" class="playlist-card">
+      <mat-card-content (click)="goToTrackDetail(track.id)">
+        <img
+        mat-card-image
+        [src]="track.album.images[0]?.url"
+        alt="Cover image"
+        />
+        <mat-card-title class="track-name">{{ track.name | truncate: 15 }}</mat-card-title>
+        <p class="artist-name">by {{ track.artists[0]?.name }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-icon-button
+          class="play-button"
+          (click)="playTrack(track.external_urls.spotify)"
+        >
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-icon-button class="wishlist-button" (click)="addToWishlist(track)">
+          <mat-icon [ngClass]="isSongInWishlist(track.id) ? 'wishlist-added' : 'wishlist-not-added'">
+            favorite
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

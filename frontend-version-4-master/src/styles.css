@@ -1,0 +1,95 @@
+
+/* Spotify Theme Colors */
+:root {
+    --spotify-green: #1DB954;
+    --spotify-black: #191414;
+    --spotify-dark-gray: #121212;
+    --white: #ffffff;
+
+  }
+  
+  /* Global body styles */
+  body {
+    background-color: var(--spotify-black);
+    color: var(--white);
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+    margin: 0;
+    width: auto;
+  }
+  
+  /* Links and Buttons */
+  a, button {
+    color: var(--spotify-green);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover, button:hover {
+    color: darken(var(--spotify-green), 10%);
+  }
+  
+  /* Navbar styles */
+  mat-toolbar {
+    background-color: var(--spotify-black);
+    color: var(--white);
+  }
+  
+  .spotify-logo {
+    color: var(--spotify-green);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  button.mat-button {
+    color: var(--white);
+  }
+  
+  /* Search bar in Navbar */
+  .search-bar {
+    background-color: var(--spotify-dark-gray);
+    width: 300px;
+    color: var(--white);
+  }
+  
+  .mat-form-field-label {
+    color: var(--white);
+  }
+  
+  /* Buttons */
+  mat-raised-button {
+    background-color: var(--spotify-green);
+    color: var(--white);
+    font-weight: bold;
+  }
+  
+  mat-raised-button:hover {
+    background-color: darken(var(--spotify-green), 10%);
+  }
+  
+  /* Homepage and other global components */
+  .homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--spotify-black);
+  }
+  
+  .hero-card {
+    background-color: var(--spotify-dark-gray);
+    color: var(--white);
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

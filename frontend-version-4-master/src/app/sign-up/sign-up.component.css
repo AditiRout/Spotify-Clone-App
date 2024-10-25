@@ -1,0 +1,97 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-bottom: 100px; /* To create space below the card */
+}
+
+.spotify-card {
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 8px;
+}
+
+.spotify-logo img {
+  width: 120px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group input {
+  width: 100%; /* Make input take up full width */
+  padding: 15px;
+  font-size: 16px;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.next-button {
+  width: 100%; /* Make button the same width as input */
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.next-button:hover {
+  background-color: #1ed760;
+}
+
+.alternative {
+  margin-top: 20px;
+  color: #b3b3b3;
+  text-align: center;
+}
+
+.alternative a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.alternative a:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.login-link a {
+  color: #1db954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+.error-message {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+}
+

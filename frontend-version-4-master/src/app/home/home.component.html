@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="playlists-container">
+  <h2 class="section-title">Popular Playlists</h2>
+  <!-- Utilizing mat-card but ensuring custom classes are applied correctly -->
+  <mat-card *ngFor="let playlist of topTracks" class="playlists-container">
+    <mat-card-header class="mat-card-header-custom">
+      <mat-card-title class="playlist-title">{{
+        playlist.name
+      }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="tracks">
+        <!-- Nesting mat-card for each track, applying custom styles for consistent look -->
+        <mat-card
+          *ngFor="let track of playlist.tracks"
+          (click)="onClick('login')"
+          class="mat-elevation-z0 track-card"
+        >
+          <img
+            mat-card-image
+            [src]="track.album.images[0].url"
+            alt="Cover image for {{ track.name }}"
+            class="track-image"
+          />
+          <mat-card-content class="track-info">
+            <p class="track-name">{{ track.name }}</p>
+            <p class="artist-name">by {{ track.artists[0].name }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,110 @@
+{
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Top Hits 2024",
+      "tracks": [
+        {
+          "id": "1",
+          "name": "Blinding Lights",
+          "artists": [{"name": "The Weeknd"}],
+          "album": {
+            "images": [{"url": "assets/images/weeknd.jpg"}]
+          }
+        },
+        {
+          "id": "2",
+          "name": "Levitating",
+          "artists": [{"name": "Dua Lipa"}],
+          "album": {
+            "images": [{"url": "assets/images/levitating.jpg"}]
+          }
+        },
+        {
+          "id": "3",
+          "name": "Good 4 U",
+          "artists": [{"name": "Olivia Rodrigo"}],
+          "album": {
+            "images": [{"url": "assets/images/good_4_u.jpg"}]
+          }
+        },
+        {
+          "id": "4",
+          "name": "Peaches",
+          "artists": [{"name": "Justin Bieber"}],
+          "album": {
+            "images": [{"url": "assets/images/peaches.jpg"}]
+          }
+        },
+        {
+          "id": "5",
+          "name": "Montero (Call Me By Your Name)",
+          "artists": [{"name": "Lil Nas X"}],
+          "album": {
+            "images": [{"url": "assets/images/montero.jpg"}]
+          }
+        }, {
+          "id": "6",
+          "name": "Stay",
+          "artists": [{"name": "The Kid LAROI & Justin Bieber"}],
+          "album": {
+            "images": [{"url": "assets/images/stay.jpg"}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Workout Mix",
+      "tracks": [
+        {
+          "id": "6",
+          "name": "Eye of the Tiger",
+          "artists": [{"name": "Survivor"}],
+          "album": {
+            "images": [{"url": "assets/images/eye_of_the_tiger.jpg"}]
+          }
+        },
+        {
+          "id": "7",
+          "name": "Can't Hold Us",
+          "artists": [{"name": "Macklemore & Ryan Lewis"}],
+          "album": {
+            "images": [{"url": "assets/images/cant_hold_us.jpg"}]
+          }
+        },
+        {
+          "id": "8",
+          "name": "Stronger",
+          "artists": [{"name": "Kanye West"}],
+          "album": {
+            "images": [{"url": "assets/images/stronger.jpg"}]
+          }
+        },
+        {
+          "id": "9",
+          "name": "Lose Yourself",
+          "artists": [{"name": "Eminem"}],
+          "album": {
+            "images": [{"url": "assets/images/lose_yourself.jpg"}]
+          }
+        },
+        {
+          "id": "10",
+          "name": "Power",
+          "artists": [{"name": "Kanye West"}],
+          "album": {
+            "images": [{"url": "assets/images/power.jpg"}]
+          }
+        },{
+        "id": "11",
+        "name": "Uptown Funk",
+        "artists": [{"name": "Mark Ronson ft. Bruno Mars"}],
+        "album": {
+          "images": [{"url": "assets/images/uptown_funk.jpg"}]
+        }
+      }
+      ]
+    }
+  ]
+}

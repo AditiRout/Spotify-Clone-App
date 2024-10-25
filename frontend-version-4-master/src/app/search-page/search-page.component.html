@@ -1,0 +1,87 @@
+<app-navbar-login></app-navbar-login>
+   <div class="container mt-5">
+    <div class="row">
+      <!-- Left Side: Top Result -->
+      <div class="col-lg-6 top-result-container">
+  <div class="top-result">
+    <h2> <strong>Top Result</strong> </h2>
+    <mat-card *ngIf="topresult?.tracks.items[0]" class="top-result-card">
+      <div class="top-result-content">
+        <!-- Left Side: Enlarged Image -->
+        <div class="top-result-image">
+          <img [src]="topresult.tracks.items[0].album.images[0]?.url" alt="Album Art" />
+        </div>
+
+        <!-- Right Side: Song Info -->
+        <div class="top-result-info">
+          <mat-card-title>{{ topresult.tracks.items[0].name }}</mat-card-title>
+          <mat-card-title class="subtitle">
+            {{ topresult.tracks.items[0].artists[0].name }}
+          </mat-card-title>
+          <p>Album: {{ topresult.tracks.items[0].album.name }}</p>
+          <p>{{ topresult.tracks.items[0].duration_ms | msToMinutes }}</p>
+
+        </div>
+
+        <!-- Buttons: Play and Wishlist moved to bottom right -->
+        <div class="top-result-actions">
+          <a
+            mat-button
+            class="spotify-button"
+            [href]="topresult.tracks.items[0].external_urls.spotify"
+            target="_blank"
+            >Play</a
+          >
+          <button mat-icon-button class="wishlist-button" (click)="addToWishlist(topresult.tracks.items[0])">
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+  
+      <!-- Right Side: Songs List -->
+      <div class="col-lg-6 spotify-container">
+        <h2>Recommended Songs</h2>
+        <br />
+        <div *ngIf="results.length > 0">
+          <mat-card *ngFor="let track of results" class="spotify-card mb-3">
+            <div class="spotify-card-content">
+              <!-- Album Art -->
+              <img
+                mat-card-avatar
+                [src]="track.album.images[1]?.url"
+                alt="Album Art"
+              />
+              <!-- Track Details -->
+              <div class="track-info">
+                <mat-card-title>{{ track.name }}</mat-card-title>
+                <mat-card-title class="subtitle">
+                  {{ track.artists[0]?.name }} -  {{ track.duration_ms | msToMinutes }}
+                </mat-card-title>
+                
+              </div>
+              <!-- Buttons: Play and Wishlist -->
+              <div class="actions">
+                <a
+                  mat-button
+                  class="spotify-button"
+                  [href]="track.external_urls.spotify"
+                  target="_blank"
+                  >Play</a
+                >
+                <button mat-icon-button class="wishlist-button" (click)="addToWishlist(track)">
+                  <mat-icon>favorite_border</mat-icon>
+                </button>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+

@@ -1,0 +1,30 @@
+<app-navbar-login></app-navbar-login>
+
+<div class="profile-container" *ngIf="user">
+  <!-- Profile Header Section -->
+  <div class="profile-header">
+    <div class="profile-picture">
+      <!-- Placeholder for profile picture -->
+      <img src="/assets/images/profile.jpg" alt="{{ user.userName }}'s profile picture">
+    </div>
+    <div class="profile-info">
+      <h1><strong>{{ user.userName }}</strong></h1>
+      <p>Email: {{ user.email }}</p>
+      <p>Gender: {{ user.gender }}</p>
+      <p>DOB: {{ user.dob | date:'MMMM d, yyyy' }}</p>
+      <button class="spotify-button" (click)="editProfile()">Edit Profile</button>
+      <button class="spotify-button danger" (click)="deleteProfile()">Delete Profile</button>
+    </div>
+  </div>
+
+  <!-- Edit Profile Section -->
+  <div class="edit-profile" *ngIf="isEditing">
+    <h2>Edit Profile</h2>
+    <input [(ngModel)]="user.userName" placeholder="Name" class="spotify-input">
+    <!-- <input [(ngModel)]="user.email" placeholder="Email" class="spotify-input"> -->
+    <input [(ngModel)]="user.gender" placeholder="Gender" class="spotify-input">
+    <input [(ngModel)]="user.dob" type="date" class="spotify-input">
+    <button class="spotify-button" (click)="saveProfile()">Save</button>
+    <button class="spotify-button" (click)="isEditing = false">Cancel</button>
+  </div>
+</div>

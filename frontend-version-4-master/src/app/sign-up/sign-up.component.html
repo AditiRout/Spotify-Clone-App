@@ -1,0 +1,27 @@
+<div class="sign-up-container">
+  <mat-card class="spotify-card">
+    <div class="spotify-logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo">
+    </div>
+    <h2>Sign up to start listening</h2>
+    <form [formGroup]="signUpForm">
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          placeholder="Email address"
+          formControlName="email"
+          [(ngModel)]="user.email"
+          required />
+        <div *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid" class="error-message">
+          <small *ngIf="signUpForm.get('email')?.errors?.['required']">Email is required.</small>
+          <small *ngIf="signUpForm.get('email')?.errors?.['email']">Please enter a valid email address.</small>
+        </div>
+      </div>
+      <button type="button" class="next-button" (click)="onNext()">Next</button>
+    </form>
+    <div class="login-link">
+      <p>Already have an account? <a routerLink="/login">Log in here</a>.</p>
+    </div>
+  </mat-card>
+</div>

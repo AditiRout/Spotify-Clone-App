@@ -1,0 +1,58 @@
+.abc{
+    margin-top: 50px;
+    margin-right: 40px;
+    color: white;
+}
+.abc:hover{
+    color:#1db954;
+}
+.spotify-footer {
+    
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-top: 1px solid #646464; 
+  
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 80px; 
+      margin-bottom: 10px; 
+  
+      a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-size: 16px;
+        &:hover {
+          color: #1db954; 
+        }
+      }
+    }
+  
+    .footer-description {
+      margin-bottom: 20px; 
+      font-size: 12px;
+    }
+  
+    .footer-social-media {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  
+      img {
+        width: 2px; 
+        height: 2px;  
+        filter: brightness(0) invert(1); 
+      }
+    }
+  }
+  

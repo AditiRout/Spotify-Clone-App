@@ -1,0 +1,47 @@
+<app-navbar-login></app-navbar-login>
+<!-- Playlist Container -->
+<div class="playlist-container">
+  <div class="top-container">
+    <!-- Header Sub-container using MatCard -->
+    <mat-card class="header-card">
+      <!-- <mat-card-header class="header"> -->
+      <div class="header-content">
+        <div class="playlist-icon">
+          <img src="assets/images/dil.png" alt="Liked Songs Icon" />
+          <!-- Adjust the source accordingly -->
+        </div>
+        <div class="header-info">
+          <mat-card-title
+            ><h1><strong>Liked Songs</strong></h1></mat-card-title
+          >
+          <mat-card-subtitle>{{ wishlist.length }} songs</mat-card-subtitle>
+          <!-- Dynamic data can replace the static text here -->
+        </div>
+      </div>
+      <!-- </mat-card-header> -->
+    </mat-card>
+  </div>
+  <!-- Songs List Sub-container using MatCard for each song -->
+  <div *ngFor="let song of wishlist" class="bottom-container">
+    <mat-card class="song-card">
+      <div class="song-info-container">
+        <div class="song-image">
+          <img mat-card-image [src]="song.imageUrl" alt="song image" />
+        </div>
+        <mat-card-content>
+          <div class="song-details">
+            <h3>{{ song.trackName }}</h3>
+            <p>{{ song.artistName }} - {{ song.albumName }}</p>
+            <p>{{ song.duration }}</p>
+          </div>
+        </mat-card-content>
+      </div>
+      <mat-card-actions align="end">
+        <button mat-button>Play</button>
+        <button mat-icon-button (click)="deleteSong(song.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

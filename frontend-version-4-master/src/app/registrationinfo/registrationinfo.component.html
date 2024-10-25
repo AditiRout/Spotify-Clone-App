@@ -1,0 +1,200 @@
+<div class="form-container">
+  <mat-card class="spotify-card">
+    <div class="spotify-logo">
+      <img
+        src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
+        alt="Spotify Logo"
+      />
+    </div>
+    <h2>Create Your Account</h2>
+    <form [formGroup]="registerForm">
+      <!-- Email input -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Email address"
+          formControlName="email"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('email')?.touched &&
+            registerForm.get('email')?.invalid
+          "
+          class="error-message"
+        >
+          <small *ngIf="registerForm.get('email')?.errors?.['required']"
+            >Email is required.</small
+          >
+          <small *ngIf="registerForm.get('email')?.errors?.['email']"
+            >Please enter a valid email address.</small
+          >
+        </div>
+      </div>
+      <!-- Password input -->
+      <div class="form-group">
+        <label for="password">Create a Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Create a password"
+          formControlName="password"
+          required
+          (focus)="onInputFocus()"
+          (blur)="onInputBlur()"
+          (input)="showErrorMessage = false"
+        />
+        <div
+          *ngIf="
+            registerForm.get('password')?.touched &&
+            registerForm.get('password')?.invalid
+          "
+          class="error-message"
+        >
+          <small *ngIf="registerForm.get('password')?.errors?.['required']"
+            >Password is required.</small
+          >
+          <small *ngIf="registerForm.get('password')?.errors?.['minlength']"
+            >Password must be at least 8 characters long.</small
+          >
+        </div>
+        <!-- Password requirements -->
+        <div class="password-requirements" *ngIf="showRequirements">
+          <ul>
+            <li [ngClass]="{ valid: checkLength() }">
+              At least 8 characters long
+            </li>
+            <li [ngClass]="{ valid: checkUppercase() }">
+              At least one uppercase letter
+            </li>
+            <li [ngClass]="{ valid: checkLowercase() }">
+              At least one lowercase letter
+            </li>
+            <li [ngClass]="{ valid: checkNumber() }">At least one number</li>
+            <li [ngClass]="{ valid: checkSpecialChar() }">
+              At least one special character
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Name input -->
+      <div class="form-group">
+        <label for="userName">Name</label>
+        <input
+          id="userName"
+          type="text"
+          placeholder="What's your name?"
+          formControlName="userName"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('userName')?.touched &&
+            registerForm.get('userName')?.invalid
+          "
+          class="error-message"
+        >
+          <small *ngIf="registerForm.get('userName')?.errors?.['required']"
+            >Name is required.</small
+          >
+          <small *ngIf="registerForm.get('userName')?.errors?.['minlength']"
+            >Name must be at least 4 characters long.</small
+          >
+        </div>
+      </div>
+      <!-- Date of Birth input -->
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" formControlName="dob" required />
+        <div
+          *ngIf="
+            registerForm.get('dob')?.touched && registerForm.get('dob')?.invalid
+          "
+          class="error-message"
+        >
+          <small *ngIf="registerForm.get('dob')?.errors?.['required']"
+            >Date of birth is required.</small
+          >
+        </div>
+      </div>
+      <!-- Gender selection -->
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" formControlName="gender" required>
+          <option value="" disabled>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="nonbinary">Non-Binary</option>
+          <option value="other">Other</option>
+        </select>
+        <div
+          *ngIf="
+            registerForm.get('gender')?.touched &&
+            registerForm.get('gender')?.invalid
+          "
+          class="error-message"
+        >
+          <small *ngIf="registerForm.get('gender')?.errors?.['required']"
+            >Gender is required.</small
+          >
+        </div>
+      </div>
+      <!-- Security question selection -->
+      <div class="form-group">
+        <label for="securityQuestion">Security Question</label>
+        <select
+          id="securityQuestion"
+          formControlName="securityQuestion"
+          required
+        >
+          <option value="" disabled selected>Select a security question</option>
+          <option value="What is your nickname?">What is your nickname?</option>
+          <option value="What was your school's name?">
+            What was your school's name?
+          </option>
+        </select>
+        <div
+          *ngIf="
+            registerForm.get('securityQuestion')?.touched &&
+            registerForm.get('securityQuestion')?.invalid
+          "
+          class="error-message"
+        >
+          <small
+            *ngIf="registerForm.get('securityQuestion')?.errors?.['required']"
+            >Security question is required.</small
+          >
+        </div>
+      </div>
+      <!-- Security answer input -->
+      <div class="form-group">
+        <label for="securityAnswer">Security Answer</label>
+        <input
+          id="securityAnswer"
+          type="text"
+          placeholder="Answer to security question"
+          formControlName="securityAnswer"
+          required
+        />
+        <div
+          *ngIf="
+            registerForm.get('securityAnswer')?.touched &&
+            registerForm.get('securityAnswer')?.invalid
+          "
+          class="error-message"
+        >
+          <small
+            *ngIf="registerForm.get('securityAnswer')?.errors?.['required']"
+            >Security answer is required.</small
+          >
+        </div>
+      </div>
+      <!-- Submit button -->
+      <button type="button" class="next-button" (click)="onNext()">
+        Create Account
+      </button>
+    </form>
+  </mat-card>
+</div>
